@@ -2,7 +2,7 @@ import { ICreateCategoryDTO } from "@modules/Categories/dtos/ICreateCategoryDTO"
 import { ICategoryRepository } from "@modules/Categories/infra/ICategoryRepository";
 import { v4 as uuidv4 } from "uuid";
 
-import { Category } from "../../entities/Category";
+import { Category } from "../typeorm/entities/Category";
 
 class CategoryRepositoryInMemory implements ICategoryRepository {
     categories: Category[] = [];
