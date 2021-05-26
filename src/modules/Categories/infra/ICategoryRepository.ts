@@ -1,5 +1,7 @@
+import { ICategoryDTO } from "../dtos/ICategoryDTO";
+
 interface ICategoryRepository {
-    Create(): Promise<void>;
+    create(data: ICategoryDTO): Promise<void>;
 }
 
 export { ICategoryRepository };
