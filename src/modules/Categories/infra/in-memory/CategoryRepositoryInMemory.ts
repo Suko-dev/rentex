@@ -6,6 +6,11 @@ import { Category } from "../typeorm/entities/Category";
 
 class CategoryRepositoryInMemory implements ICategoryRepository {
     categories: Category[] = [];
+
+    findByName(name: string): Category | undefined {
+        return this.categories.find((item) => item.name === name);
+    }
+
     async create(data: ICreateCategoryDTO): Promise<void> {
         const category = new Category();
         Object.assign(category, {
