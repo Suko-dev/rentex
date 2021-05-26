@@ -5,6 +5,13 @@ import { v4 as uuidv4 } from "uuid";
 import { Category } from "../typeorm/entities/Category";
 
 class CategoryRepositoryInMemory implements ICategoryRepository {
+    findById(id: string): Category | undefined {
+        return this.categories.find((item) => item.id === id);
+    }
+
+    list(): Category[] {
+        return this.categories;
+    }
     categories: Category[] = [];
 
     findByName(name: string): Category | undefined {
