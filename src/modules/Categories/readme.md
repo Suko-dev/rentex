@@ -10,7 +10,9 @@
 **RF**
 [x]Deve ser possível listar as categorias
 [x]Deve ser possível buscar uma categoria por nome
-[x]Deve ser possível buscar uma categoria por id
+
+### future feats
+[]Deve ser possível buscar uma categoria por id
 
 # Edição de categoria
 **RF**
