@@ -2,19 +2,19 @@ import { ICreateCategoryDTO } from "@modules/Categories/dtos/ICreateCategoryDTO"
 import { ICategoryRepository } from "@modules/Categories/infra/ICategoryRepository";
 import { v4 as uuidv4 } from "uuid";
 
-import { Category } from "../typeorm/entities/Category";
+import { Category } from "../typeorm/entity/Category";
 
 class CategoryRepositoryInMemory implements ICategoryRepository {
-    findById(id: string): Category | undefined {
+    async findById(id: string): Promise<Category | undefined> {
         return this.categories.find((item) => item.id === id);
     }
 
-    list(): Category[] {
+    async list(): Promise<Category[]> {
         return this.categories;
     }
     categories: Category[] = [];
 
-    findByName(name: string): Category | undefined {
+    async findByName(name: string): Promise<Category | undefined> {
         return this.categories.find((item) => item.name === name);
     }
 

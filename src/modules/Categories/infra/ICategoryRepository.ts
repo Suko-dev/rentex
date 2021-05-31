@@ -1,5 +1,5 @@
 import { ICreateCategoryDTO } from "../dtos/ICreateCategoryDTO";
-import { Category } from "./typeorm/entities/Category";
+import { Category } from "./typeorm/entity/Category";
 
 interface ICategoryRepository {
     create(data: ICreateCategoryDTO): Promise<void>;
