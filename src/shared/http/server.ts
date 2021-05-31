@@ -7,6 +7,7 @@ import dbServer from "@shared/typeorm";
 import "@shared/container";
 
 import swaggerFile from "../../swagger.json";
+import { router } from "./routes";
 
 dbServer("database");
 
@@ -15,4 +16,5 @@ app.use(express.json());
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
+app.use(router);
 export { app };
