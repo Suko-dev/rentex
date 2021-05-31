@@ -1,13 +1,7 @@
-import { createConnection, Connection } from "typeorm";
+import { Connection, createConnection, getConnectionOptions } from "typeorm";
 
-const connection = async (database = "localhost"): Promise<Connection> => {
-    const connection = await createConnection({
-        type: "postgres",
-        host: database,
-        database: "rentex",
-        username: "docker",
-        password: "ignite",
-    });
-    return connection;
+export default async (host = "database"): Promise<Connection> => {
+    const options = await getConnectionOptions();
+
+    return createConnection(Object.assign(options, { ...options, host }));
 };
-export { connection };
