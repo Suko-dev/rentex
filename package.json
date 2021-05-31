@@ -4,7 +4,7 @@
   "description": "Base repository for node/express projects",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --inspect --transpile-only --ignore-watch node_modules src/shared/http/app.ts",
     "test": "jest",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
   },
