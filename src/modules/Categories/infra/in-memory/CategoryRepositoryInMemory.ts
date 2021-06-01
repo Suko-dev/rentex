@@ -5,6 +5,8 @@ import { v4 as uuidv4 } from "uuid";
 import { Category } from "../typeorm/entity/Category";
 
 class CategoryRepositoryInMemory implements ICategoryRepository {
+    categories: Category[] = [];
+
     async findById(id: string): Promise<Category | undefined> {
         return this.categories.find((item) => item.id === id);
     }
@@ -12,7 +14,6 @@ class CategoryRepositoryInMemory implements ICategoryRepository {
     async list(): Promise<Category[]> {
         return this.categories;
     }
-    categories: Category[] = [];
 
     async findByName(name: string): Promise<Category | undefined> {
         return this.categories.find((item) => item.name === name);
