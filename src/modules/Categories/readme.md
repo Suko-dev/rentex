@@ -1,31 +1,31 @@
 # Cadastro de categoria
 **RF**
-[x]Deve ser possível cadastrar uma nova categoria
+<p>[x]Deve ser possível cadastrar uma nova categoria</p>
 
 **RN**
-[x]Não deve ser possível cadastrar uma categoria já existente
-[]Somente usuários admins podem criar uma categoria
+<p>[x]Não deve ser possível cadastrar uma categoria já existente</p>
+<p>[]Somente usuários admins podem criar uma categoria</p>
 
 # Listagem de Categoria
 **RF**
-[x]Deve ser possível listar as categorias
-[x]Deve ser possível buscar uma categoria por nome
+<p>[x]Deve ser possível listar as categorias</p>
+<p>[x]Deve ser possível buscar uma categoria por nome</p>
 
 ### future feats
-[]Deve ser possível buscar uma categoria por id
+<p>[]Deve ser possível buscar uma categoria por id</p>
 
 # Edição de categoria
 **RF**
-[]Deve ser possível editar a descrição de uma categoria
+<p>[]Deve ser possível editar a descrição de uma categoria</p>
 
 **RN**
-[]Somente usuários admins podem editar uma categoria
-[]Não deve ser possível editar uma categoria não existente
+<p>[]Somente usuários admins podem editar uma categoria</p>
+<p>[]Não deve ser possível editar uma categoria não existente</p>
 
 # Excluir categoria
 **RN**
-[]Deve ser possível excluir uma categoria
+<p>[]Deve ser possível excluir uma categoria</p>
 
 **RF**
-[]Somente usuários admins podem excluir uma categoria
-[]Não deve ser possível excluir uma categoria não existente
+<p>[]Somente usuários admins podem excluir uma categoria</p>
+<p>[]Não deve ser possível excluir uma categoria não existente</p>
