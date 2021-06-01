@@ -1,11 +1,17 @@
 import { ICreateUserDTO } from "@modules/Account/dtos/ICreateUserDTO";
 import { IUserRepository } from "@modules/Account/infra/IUserRepository";
 import { hash } from "bcrypt";
+import "reflect-metadata";
+import { inject, injectable } from "tsyringe";
 
 import { AppError } from "@shared/errors/AppError";
 
+@injectable()
 class CreateUserUseCase {
-    constructor(private createUserRepository: IUserRepository) {}
+    constructor(
+        @inject("UserRepository") private createUserRepository: IUserRepository
+    ) {}
+
     async execute({
         name,
         username,
@@ -23,7 +29,7 @@ class CreateUserUseCase {
         if (userUserName) {
             throw new AppError("User already exists");
         }
-        const hashPassword = await hash(password, 10);
+        const hashPassword = await hash(password, 8);
         this.createUserRepository.create({
             name,
             username,
