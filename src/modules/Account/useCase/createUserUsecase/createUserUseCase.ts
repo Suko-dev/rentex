@@ -1,6 +1,6 @@
 import { ICreateUserDTO } from "@modules/Account/dtos/ICreateUserDTO";
 import { IUserRepository } from "@modules/Account/infra/IUserRepository";
-import { hash } from "bcrypt";
+import { hash } from "bcryptjs";
 import "reflect-metadata";
 import { inject, injectable } from "tsyringe";
 
