@@ -5,7 +5,6 @@ import { AuthUserUseCase } from "./authUserUseCase";
 
 class AuthUserController {
     async handle(request: Request, response: Response): Promise<Response> {
-        console.log("oi");
         try {
             const authUserUseCase = container.resolve(AuthUserUseCase);
             const { email, password } = request.body;

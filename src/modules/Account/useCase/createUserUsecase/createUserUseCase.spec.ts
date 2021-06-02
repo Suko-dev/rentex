@@ -19,7 +19,6 @@ describe("Create user", () => {
             driver_license: "1234",
         });
         const user = await userRepositoryInMemory.findByEmail("joe@email.com");
-        console.log(user);
         expect(user).toHaveProperty("id");
     });
 });
