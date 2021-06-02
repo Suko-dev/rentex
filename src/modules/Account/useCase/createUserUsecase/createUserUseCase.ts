@@ -21,13 +21,13 @@ class CreateUserUseCase {
     }: ICreateUserDTO): Promise<void> {
         const userMail = await this.createUserRepository.findByEmail(email);
         if (userMail) {
-            throw new AppError("There is already an user with this e-mail");
+            throw new AppError("Email already registered");
         }
         const userUserName = await this.createUserRepository.findByUserName(
             username
         );
         if (userUserName) {
-            throw new AppError("User already exists");
+            throw new AppError("Username already registered");
         }
         const hashPassword = await hash(password, 8);
         this.createUserRepository.create({
